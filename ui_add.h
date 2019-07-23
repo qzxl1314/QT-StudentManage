@@ -43,16 +43,16 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *male;
+    QRadioButton *maden;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_5;
-    QComboBox *comboBox;
+    QComboBox *age;
     QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_7;
-    QComboBox *comboBox_2;
+    QComboBox *major;
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_6;
@@ -63,8 +63,8 @@ public:
     QCheckBox *checkBox_4;
     QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout_7;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
+    QPushButton *ok;
+    QPushButton *cancel;
 
     void setupUi(QDialog *add)
     {
@@ -141,15 +141,15 @@ public:
 
         horizontalLayout_3->addWidget(label_4);
 
-        radioButton = new QRadioButton(add);
-        radioButton->setObjectName(QStringLiteral("radioButton"));
+        male = new QRadioButton(add);
+        male->setObjectName(QStringLiteral("male"));
 
-        horizontalLayout_3->addWidget(radioButton);
+        horizontalLayout_3->addWidget(male);
 
-        radioButton_2 = new QRadioButton(add);
-        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
+        maden = new QRadioButton(add);
+        maden->setObjectName(QStringLiteral("maden"));
 
-        horizontalLayout_3->addWidget(radioButton_2);
+        horizontalLayout_3->addWidget(maden);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -170,10 +170,10 @@ public:
 
         horizontalLayout_4->addWidget(label_5);
 
-        comboBox = new QComboBox(add);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
+        age = new QComboBox(add);
+        age->setObjectName(QStringLiteral("age"));
 
-        horizontalLayout_4->addWidget(comboBox);
+        horizontalLayout_4->addWidget(age);
 
         horizontalSpacer_4 = new QSpacerItem(28, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -193,10 +193,10 @@ public:
 
         horizontalLayout_5->addWidget(label_7);
 
-        comboBox_2 = new QComboBox(add);
-        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
+        major = new QComboBox(add);
+        major->setObjectName(QStringLiteral("major"));
 
-        horizontalLayout_5->addWidget(comboBox_2);
+        horizontalLayout_5->addWidget(major);
 
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -254,15 +254,15 @@ public:
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setSpacing(6);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        pushButton_2 = new QPushButton(add);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        ok = new QPushButton(add);
+        ok->setObjectName(QStringLiteral("ok"));
 
-        horizontalLayout_7->addWidget(pushButton_2);
+        horizontalLayout_7->addWidget(ok);
 
-        pushButton = new QPushButton(add);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        cancel = new QPushButton(add);
+        cancel->setObjectName(QStringLiteral("cancel"));
 
-        horizontalLayout_7->addWidget(pushButton);
+        horizontalLayout_7->addWidget(cancel);
 
 
         verticalLayout->addLayout(horizontalLayout_7);
@@ -282,8 +282,8 @@ public:
         label_3->setText(QApplication::translate("add", "\345\255\246\345\217\267", 0));
         number->setPlaceholderText(QApplication::translate("add", "\350\276\223\345\205\245\345\255\246\347\224\237\345\255\246\345\217\267", 0));
         label_4->setText(QApplication::translate("add", "\346\200\247\345\210\253", 0));
-        radioButton->setText(QApplication::translate("add", "\347\224\267", 0));
-        radioButton_2->setText(QApplication::translate("add", "\345\245\263", 0));
+        male->setText(QApplication::translate("add", "\347\224\267", 0));
+        maden->setText(QApplication::translate("add", "\345\245\263", 0));
         label_5->setText(QApplication::translate("add", "\345\271\264\351\276\204", 0));
         label_7->setText(QApplication::translate("add", "\344\270\223\344\270\232", 0));
         label_6->setText(QApplication::translate("add", "\345\205\264\350\266\243", 0));
@@ -291,8 +291,8 @@ public:
         checkBox_2->setText(QApplication::translate("add", "\347\257\256\347\220\203", 0));
         checkBox_3->setText(QApplication::translate("add", "\347\276\275\346\257\233\347\220\203", 0));
         checkBox_4->setText(QApplication::translate("add", "\344\271\222\344\271\223\347\220\203", 0));
-        pushButton_2->setText(QApplication::translate("add", "\347\241\256\345\256\232", 0));
-        pushButton->setText(QApplication::translate("add", "\345\217\226\346\266\210", 0));
+        ok->setText(QApplication::translate("add", "\347\241\256\345\256\232", 0));
+        cancel->setText(QApplication::translate("add", "\345\217\226\346\266\210", 0));
     } // retranslateUi
 
 };
