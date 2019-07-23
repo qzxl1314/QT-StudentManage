@@ -117,14 +117,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="male">
        <property name="text">
         <string>男</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="maden">
        <property name="text">
         <string>女</string>
        </property>
@@ -155,7 +155,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="age"/>
      </item>
      <item>
       <spacer name="horizontalSpacer_4">
@@ -182,7 +182,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_2"/>
+      <widget class="QComboBox" name="major"/>
      </item>
      <item>
       <spacer name="horizontalSpacer_5">
@@ -258,14 +258,14 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="ok">
        <property name="text">
         <string>确定</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="cancel">
        <property name="text">
         <string>取消</string>
        </property>

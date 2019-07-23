@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+*.Debug
+*.Release
+*.md
+
+
+Debug/  
+Release/
+Makefile
