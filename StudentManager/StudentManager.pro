@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         add.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    query.cpp
 
 HEADERS  += add.h \
-    mainwindow.h
+    mainwindow.h \
+    query.h
 
 FORMS    += add.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    query.ui

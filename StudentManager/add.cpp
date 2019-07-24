@@ -46,11 +46,11 @@ void add::on_ok_clicked()
     }
     QString age=this->ui->age->currentText();
     QString major=this->ui->major->currentText();
-    QString str=name+" "+number+" "+sex+" "+age+" "+major+" "+ins;
+    QString str=name+" "+number+" "+sex+" "+age+" "+major+" "+ins+"\n";
     if(name.length()<1||number.length()<1){
         QMessageBox::critical(this,"错误","信息不完整","确定");
     }else{
-       int ret=QMessageBox::question(this,"请确认信息",name+"\n"+number+"\n"+sex+"\n"+age+"\n"+major+"\n"+ins,"确认","取消");
+       int ret=QMessageBox::question(this,"请确认信息",name+"\n"+number+"\n"+sex+"\n"+age+"\n"+major+"\n"+ins+"\n","确认","取消");
        if(ret==0){
            clearuserinfo();
            writetoflie(str);
@@ -60,12 +60,19 @@ void add::on_ok_clicked()
 void add::writetoflie(QString sir)
 {
     QFile file("stu.txt");
-    if(!file.open(QIODevice::WriteOnly|QIODevice::Text)){
+    if(!file.open(QIODevice::Append |QIODevice::Text)){
+        QMessageBox::critical(this,"错误","信息上传失败！","确定  ");
         return;
     }
     QTextStream out(&file);
     out<<sir;
+    file.close();
 }
 
 
 
+
+void add::on_cancel_clicked()
+{
+    this->close();
+}
