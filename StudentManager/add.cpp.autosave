@@ -60,12 +60,19 @@ void add::on_ok_clicked()
 void add::writetoflie(QString sir)
 {
     QFile file("stu.txt");
-    if(!file.open(QIODevice::WriteOnly|QIODevice::Text)){
+    if(!file.open(QIODevice::Append |QIODevice::Text)){
+        QMessageBox::critical(this,"错误","信息上传失败！","确定  ");
         return;
     }
     QTextStream out(&file);
     out<<sir;
+    file.close(); 
 }
 
 
 
+
+void add::on_cancel_clicked()
+{
+    this->close();
+}
