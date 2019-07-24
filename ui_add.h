@@ -65,6 +65,8 @@ public:
     QHBoxLayout *horizontalLayout_7;
     QPushButton *ok;
     QPushButton *cancel;
+    QButtonGroup *sexGroup;
+    QButtonGroup *insGroup;
 
     void setupUi(QDialog *add)
     {
@@ -103,6 +105,8 @@ public:
 
         name = new QLineEdit(add);
         name->setObjectName(QStringLiteral("name"));
+        name->setDragEnabled(false);
+        name->setClearButtonEnabled(true);
 
         horizontalLayout->addWidget(name);
 
@@ -123,6 +127,7 @@ public:
 
         number = new QLineEdit(add);
         number->setObjectName(QStringLiteral("number"));
+        number->setClearButtonEnabled(true);
 
         horizontalLayout_2->addWidget(number);
 
@@ -142,11 +147,16 @@ public:
         horizontalLayout_3->addWidget(label_4);
 
         male = new QRadioButton(add);
+        sexGroup = new QButtonGroup(add);
+        sexGroup->setObjectName(QStringLiteral("sexGroup"));
+        sexGroup->addButton(male);
         male->setObjectName(QStringLiteral("male"));
+        male->setChecked(true);
 
         horizontalLayout_3->addWidget(male);
 
         maden = new QRadioButton(add);
+        sexGroup->addButton(maden);
         maden->setObjectName(QStringLiteral("maden"));
 
         horizontalLayout_3->addWidget(maden);
@@ -158,7 +168,6 @@ public:
         horizontalLayout_3->setStretch(0, 1);
         horizontalLayout_3->setStretch(1, 3);
         horizontalLayout_3->setStretch(2, 3);
-        horizontalLayout_3->setStretch(3, 3);
 
         verticalLayout->addLayout(horizontalLayout_3);
 
@@ -220,21 +229,28 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         checkBox = new QCheckBox(add);
+        insGroup = new QButtonGroup(add);
+        insGroup->setObjectName(QStringLiteral("insGroup"));
+        insGroup->setExclusive(false);
+        insGroup->addButton(checkBox);
         checkBox->setObjectName(QStringLiteral("checkBox"));
 
         gridLayout->addWidget(checkBox, 0, 0, 1, 1);
 
         checkBox_2 = new QCheckBox(add);
+        insGroup->addButton(checkBox_2);
         checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
 
         gridLayout->addWidget(checkBox_2, 0, 1, 1, 1);
 
         checkBox_3 = new QCheckBox(add);
+        insGroup->addButton(checkBox_3);
         checkBox_3->setObjectName(QStringLiteral("checkBox_3"));
 
         gridLayout->addWidget(checkBox_3, 1, 0, 1, 1);
 
         checkBox_4 = new QCheckBox(add);
+        insGroup->addButton(checkBox_4);
         checkBox_4->setObjectName(QStringLiteral("checkBox_4"));
 
         gridLayout->addWidget(checkBox_4, 1, 1, 1, 1);
@@ -285,7 +301,23 @@ public:
         male->setText(QApplication::translate("add", "\347\224\267", 0));
         maden->setText(QApplication::translate("add", "\345\245\263", 0));
         label_5->setText(QApplication::translate("add", "\345\271\264\351\276\204", 0));
+        age->clear();
+        age->insertItems(0, QStringList()
+         << QApplication::translate("add", "18", 0)
+         << QApplication::translate("add", "19", 0)
+         << QApplication::translate("add", "20", 0)
+         << QApplication::translate("add", "21", 0)
+         << QApplication::translate("add", "22", 0)
+         << QApplication::translate("add", "23", 0)
+         << QApplication::translate("add", "24", 0)
+        );
         label_7->setText(QApplication::translate("add", "\344\270\223\344\270\232", 0));
+        major->clear();
+        major->insertItems(0, QStringList()
+         << QApplication::translate("add", "\350\256\241\347\256\227\346\234\272\346\212\200\346\234\257", 0)
+         << QApplication::translate("add", "\347\275\221\347\273\234\345\267\245\347\250\213", 0)
+         << QApplication::translate("add", "\344\277\241\346\201\257\347\256\241\347\220\206", 0)
+        );
         label_6->setText(QApplication::translate("add", "\345\205\264\350\266\243", 0));
         checkBox->setText(QApplication::translate("add", "\350\266\263\347\220\203", 0));
         checkBox_2->setText(QApplication::translate("add", "\347\257\256\347\220\203", 0));
